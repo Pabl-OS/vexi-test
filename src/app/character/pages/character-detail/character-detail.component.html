@@ -1,23 +1,24 @@
-    <div class="character__main-container">
+    <div class="character__main-container" 
+         *ngIf="character">
         <div class="card character__card-container  border border-0 p-5">
             <div class="row">
                 <div class="col-md-3 d-flex">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/15.jpeg" 
+                    <img [src]="character.image" 
                          alt=""
                          class="img-fluid rounded-circle align-self-center"
                          width="100%">
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-4 text-center text-uppercase">
-                        <b> Nombre Personaje</b>
+                        <b> {{character.name}}</b>
                     </h2>
                     
                     <div class="mt-5 mb-4 d-flex text-muted justify-content-around">
-                        <p> Humano </p>
+                        <p> {{character.species}} </p>
                         <span class="text-warning">|</span>
-                        <p> Vivo </p>
+                        <p> {{character.status}} </p>
                         <span class="text-warning">|</span>
-                        <p> Male</p>
+                        <p> {{character.gender}}</p>
                     </div>
     
                     <div class="row mt-5 justify-content-md-center">
@@ -26,7 +27,7 @@
                                 <h5 class="text-bold">
                                     <b>Origen:</b>
                                 </h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p>{{character.origin.name}}</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -34,7 +35,7 @@
                                 <h5 class="text-bold">
                                     <b>Ubicación:</b> 
                                 </h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p>{{character.location.name}}</p>
                             </div>
                         </div>   
                     </div>
@@ -44,10 +45,7 @@
                             Regresar
                         </button>
                     </div>
-    
-    
                 </div>
-    
             </div>
         </div>
     </div>

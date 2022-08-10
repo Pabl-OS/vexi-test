@@ -1,14 +1,14 @@
-<div class="card border border-0 p-4">
+<div class="card border border-0 p-4 h-100">
     <div class="card-body text-center">
-            <img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" 
+            <img [src]="character.image" 
                  alt=""
                  width="40%"
                  class="img-fluid mt-3 rounded-circle">
             <h4 class="text-bold mb-3 mt-4">
-                Nombre Personaje
+                {{character.name}}
             </h4>
             <span class="text-muted">
-                 Vivo | especie 
+                 {{character.status}} | {{character.species}} 
             </span>            
     </div>
     <div >
@@ -16,19 +16,19 @@
             Origen:
         </span>
         <p class="mb-4">
-            Earth (C-137)
+            {{character.origin.name}}
         </p>
 
         <span class="text-muted">
             Ubicación:
         </span>
         <p class="mb-4">
-            Citadel of Ricks
+            {{character.location.name}}
         </p>
     </div>
     <div class="d-grid gap-2 ">
         <button class="character__btn-detail"
-                [routerLink]="['../detalle',1]">
+                [routerLink]="['../detalle',character.id]">
             Ver detalle
         </button>
     </div>

@@ -5,41 +5,11 @@
 <hr>
 
 <!-- list characters -->
-<div class="row mt-4">
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-        <app-card-character></app-card-character>
+<div class="row mt-4" *ngIf="characters">
+    <div class="col-lg-4 col-md-6 mb-2" 
+         *ngFor="let character of characters.results;let index = index">
+        <app-card-character *ngIf="index < 12" 
+                            [character]="character">
+        </app-card-character>
     </div>
 </div>

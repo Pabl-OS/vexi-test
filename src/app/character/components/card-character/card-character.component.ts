@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Character } from 'src/app/interfaces/Characters';
 
 @Component({
@@ -6,7 +6,7 @@ import { Character } from 'src/app/interfaces/Characters';
   templateUrl: './card-character.component.html'
 })
 export class CardCharacterComponent implements OnInit {
-  public character!:Character;
+  @Input() character!:Character;
   constructor() { }
 
   ngOnInit(): void {
