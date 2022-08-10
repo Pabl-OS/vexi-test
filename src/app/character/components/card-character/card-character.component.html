@@ -1,1 +1,35 @@
-<p>card-character works!</p>
+<div class="card border border-0 p-4">
+    <div class="card-body text-center">
+            <img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" 
+                 alt=""
+                 width="40%"
+                 class="img-fluid mt-3 rounded-circle">
+            <h4 class="text-bold mb-3 mt-4">
+                Nombre Personaje
+            </h4>
+            <span class="text-muted">
+                 Vivo | especie 
+            </span>            
+    </div>
+    <div >
+        <span class="text-muted ">
+            Origen:
+        </span>
+        <p class="mb-4">
+            Earth (C-137)
+        </p>
+
+        <span class="text-muted">
+            Ubicación:
+        </span>
+        <p class="mb-4">
+            Citadel of Ricks
+        </p>
+    </div>
+    <div class="d-grid gap-2 ">
+        <button class="character__btn-detail"
+                [routerLink]="['../detalle',1]">
+            Ver detalle
+        </button>
+    </div>
+</div>

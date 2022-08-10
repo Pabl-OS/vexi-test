@@ -1,0 +1,39 @@
+.character {
+
+   &__btn-detail, &__btn-return {
+   border: none;
+   background-color: $primary-color;
+   border-radius: 25px;
+   color: white;
+   padding: 10px;
+   &:hover {
+      background-color: darken($color: $primary-color, $amount: 10);
+      }
+   }
+
+   &__btn-return {
+      padding-left:  20px;
+      padding-right: 20px;
+   }
+
+   &__card-info {
+      background-color: lighten($color: $primary-color, $amount:20);
+      border-radius: 20px;
+      color: white;
+      padding: 10px;
+   }
+
+   &__main-container{
+      height: 100vh;
+      position: relative;
+   }
+
+   &__card-container{
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+   } 
+}
+  
